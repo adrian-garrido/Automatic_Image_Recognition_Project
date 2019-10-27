@@ -1,16 +1,16 @@
 # Automatic Image Recognition Classifier
 
-** This is a work in progress**
+** This is a work in progress **
 
 ## Problem Statement:
 
-Creating a python scrypt that gathers images and processes them accordingly. Then creates and alayzes a multi-class classification model with those images, automatically.
+Creating a python scrypt that gathers images and processes them accordingly. Then creates and analyzes a multi-class classification model with those images, automatically.
 
 ## Data Collection
 
 The google_images_download package was the main tool used for data collection. It allows the program to search for whatever images the user sets up as the topics. With the way it is set up right now, it allows for a maximum of 500 images, that were uploaded in 2018, for each class. But it is possible to add more images, by adding new requests for different years.
 
-The images are organized into a 'data' folder and then subfolders of each class.
+The images are automatically organized into a 'data' folder and then subfolders for each class.
 
 When the 'model_tester' function is called, this downloads 3 images from each class, to use as validation data and test predictions.
 
@@ -18,7 +18,7 @@ When the 'model_tester' function is called, this downloads 3 images from each cl
 
 The images are processes using cv2, transforming all of them into a numpy array of 4 dimensions, including the total number of images, the pixel size, and an RGB structure.
 
-AN Image Data Generator was also used when fitting the model, which tweaks each image slightly in different ways, to prevent the model from using the position of items as a feature.
+An Image Data Generator was also used when fitting the model, which generates new images with small tweaks, slightly altering them in different ways, to prevent the model from using the position of items in the pictures as a feature.
 
 ## Program Structure
 
