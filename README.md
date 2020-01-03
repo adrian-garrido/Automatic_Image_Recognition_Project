@@ -1,6 +1,8 @@
 # Automatic Image Recognition Classifier
 
 ** This is a work in progress **
+** google_images_download works best when the image count is 500 or less. It is possible to make multiple requests from different time periods and combine the results in order to get larger sample sizes for each class. **
+
 
 ## Problem Statement:
 

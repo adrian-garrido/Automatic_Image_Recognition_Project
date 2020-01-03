@@ -233,6 +233,7 @@ def model_maker(X, y, topics, epochs):
     return model
 
 
+####### TESTING MODEL #######
 
 def model_tester(model, topics, img_size):
     
@@ -274,7 +275,7 @@ def model_tester(model, topics, img_size):
         text_trap = io.StringIO()
         sys.stdout = text_trap
         
-        # image collection using google_images_download
+        # image collection using google_images_download, only images downloaded in 2014 to minimize posibility of duplicate images
         response = google_images_download.googleimagesdownload() 
         arguments = {'keywords': search_term,
                      'size': 'medium',
